@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CSE 110 Lab2</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <title>CSE 110 Lab2</title>
     </head>
     <body>
-        <h1>Title for Testing Purpose</h1>
+        <header>
+            <h1>FALL 2021 CSE 110 Lab2 Done by Tianyue Zhang</h1>
+            <nav>
+                <ul>
+                    <li><a href="#attendance-list">Attendance List</a></li>
+                    <li><a href="#multimedia-recording">Multimedia Recording</a></li>
+                    <li><a href="#questionnaire">Questionnaire</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <hr>
+
+        <main>
+            <section id="attendance-list">
+                <h2>Attendance List</h2>
+                <ul>
+                    <li>Prof Powell</li>
+                    <li>Tianyue Zhang</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section id="multimedia-recording">
+                <h2>Multimedia Recording</h2>
+                <h3>Picture Demo</h3>
+                <img src="Meeting_Topic_Soccer.png" alt="Topic of Today's Meeting - Soccer">
+                <h3>Audio Demo</h3>
+                <audio controls src="/30_Seconds_Of_Lionel_Messi.mp3"></audio>
+                <h3>Video Demo</h3>
+                <video controls width="300">
+                <source src="/30_Seconds_Of_Lionel_Messi.mp4" type="video/mp4"></video>
+            </section>
+            
+            <hr>
+
+            <section id="questionnaire">
+            <h2>Questionnaire</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+
+                    <br>
+
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" value="2000-01-01">
+
+                    <br>
+
+                    <fieldset>
+                        <legend>Choose your favorite programming language</legend>
+              
+                        <input type="radio" id="c-plus-plus" name="favorite-programming-language" value="c-plus-plus">
+                        <label for="c-plus-plus">C++</label><br>
+                    
+                        <input type="radio" id="java" name="favorite-programming-language" value="java">
+                        <label for="java">Java</label><br>
+              
+                        <input type="radio" id="python" name="favorite-programming-language" value="python">
+                        <label for="python">Python</label><br>
+                    
+                        <input type="radio" id="other" name="favorite-programming-language" value="other">
+                        <label for="other">Other</label><br>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>Choose your interests</legend>
+                        <div>
+                            <input type="checkbox" id="coding" name="interest" value="coding">
+                            <label for="coding">Coding</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="soccer" name="interest" value="soccer">
+                            <label for="soccer">Soccer</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="music" name="interest" value="music">
+                            <label for="music">Music</label>
+                        </div>
+                    </fieldset>
+
+                    <br>
+
+                    <label for="favorite-browser">Choose your favorite browser:</label>
+                    <select name="browsers" id="favorite-browser">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Chrome">Chrome</option>
+                        <option value="Firefox">Firefox</option>
+                        <option value="Internet Explorer">Internet Explorer</option>
+                        <option value="Safari">Safari</option>
+                        <option value="Microsoft Edge">Microsoft Edge</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <br>
+
+                    <label for="favorite-pet">Choose your favorite pet (type in if not listed):</label>
+                    <input list="pets" id="favorite-pet" name="favorite-pet" />
+                    <datalist id="pets">
+                        <option value="Dog">
+                        <option value="Cat">
+                    </datalist>
+
+                    <br>
+
+                    <label for="feedback">Please give us some additional feedbacks:</label><br>
+                    <textarea id="feedback" name="feedback" rows="5" cols="33">I think...</textarea>
+                    <br>
+                    <button>Save</button>
+                </form>
+            </section>
+        </main>
+
+        <hr>
+
+        <footer>
+            <details>
+                <summary>Author of This Web Page</summary>
+                <p>Tianyue Zhang, a senior UCSD student majoring in MATH-CS</p>
+            </details>
+            <details>
+                <summary>External Resources</summary>
+                <ul>
+                    <li>
+                        Picture From
+                        <a href="https://cse110-fall21.slack.com/files/U02DNF66BFC/F02FHC9QFRR/1_-_se_introduction.pdf">
+                            FALL 2021 CSE 110 Slide - "1 - SE Introduction" 
+                        </a>
+                        By Professor Powell
+                    </li>
+                    <li>
+                        Video & Audio From
+                        <a href="https://www.youtube.com/watch?v=oaUfTKL4dro&ab_channel=SportsLife365">
+                            "30 Seconds Of Lionel Messi" 
+                        </a>
+                        By "SportsLife365" on YouTube
+                    </li>
+                </ul>
+            </details>
+        </footer>
     </body>
 </html>
