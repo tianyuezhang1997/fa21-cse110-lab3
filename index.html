@@ -5,6 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="index.css">
+        <style>
+            .flex-container {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              align-items: stretch;
+            }
+            
+            .flex-container > div {
+              text-align: center;
+              position: relative;
+            }
+
+            .grid-container {
+              display: grid;
+              grid-template-columns: auto auto;
+              background-color: #2196F3;
+              padding: 10px;
+            }
+
+            .grid-item {
+              align-self: center;
+              justify-self: center;
+              background-color: white;
+              border: 5px solid black;
+              padding: 20px;
+              text-align: center;
+              position: relative;
+              font-size: 1em;
+              width: 20vw;
+              height: 10vh;
+            }
+        </style>
         <title>CSE 110 Lab2</title>
     </head>
     <body>
@@ -15,15 +49,15 @@
             <nav>
                 <h2>Meeting Sections</h2>
                 <span>Date: 10/3/2021 </span>
-                <ul>
-                    <li><a href="#attendance-list">Attendance List</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#unfinished-business">Unfinished Business</a></li>
-                    <li><a href="#new-business">New Business</a></li>
-                    <li><a href="#comments">Comments</a></li>
-                    <li><a href="#multimedia-recording">Multimedia Recording</a></li>
-                    <li><a href="#questionnaire">Questionnaire</a></li>
-                </ul>
+                <div class="flex-container">
+                    <div><a href="#attendance-list">Attendance List</a></div>
+                    <div><a href="#agenda">Agenda</a></div>
+                    <div><a href="#unfinished-business">Unfinished Business</a></div>
+                    <div><a href="#new-business">New Business</a></div>
+                    <div><a href="#comments">Comments</a></div>
+                    <div><a href="#multimedia-recording">Multimedia Recording</a></div>
+                    <div><a href="#questionnaire">Questionnaire</a></div>
+                </div>
             </nav>
         </header>
         
@@ -33,8 +67,17 @@
             <section id="attendance-list">
                 <h2>Attendance List</h2>
                 <ul>
-                    <li>Prof Powell</li>
+                    <li>Raaghav (TA)</li>
                     <li>Tianyue Zhang</li>
+                    <li>Adithya Telang</li>
+                    <li>Amj</li>    
+                    <li>Ruijia Niu</li>     
+                    <li>Em Nam</li>       
+                    <li>Joanne Wu</li>   
+                    <li>Jonny Tran</li>   
+                    <li>Ryan Wright</li> 
+                    <li>Zachary Norman</li>
+                    <li>Zhi Liang</li>
                 </ul>
             </section>
 
@@ -44,7 +87,7 @@
                 <h2>Agenda</h2>
                 <ol>
                     <li>Self-introduction</li>
-                    <li>Share Interests</li>
+                    <li>Casual Chats</li>
                 </ol>
             </section>
 
@@ -52,7 +95,12 @@
 
             <section id="unfinished-business">
                 <h2>Unfinished Business</h2>
-                <p>None</p>
+                <div class="grid-container">
+                    <div class="grid-item">Group Bonding Event</div>
+                    <div class="grid-item">Group Kickoff, Repo and Meeting Prep</div>
+                    <div class="grid-item">Branding, Group Page and Video</div>
+                    <div class="grid-item">Group Contract</div>
+                </div>
             </section>
 
             <hr>
@@ -81,7 +129,7 @@
                 <h3>Audio Demo</h3>
                 <audio controls src="30_Seconds_Of_Lionel_Messi.mp3"></audio>
                 <h3>Video Demo</h3>
-                <video controls width="300px">
+                <video controls width="300">
                 <source src="30_Seconds_Of_Lionel_Messi.mp4" type="video/mp4"></video>
             </section>
             
