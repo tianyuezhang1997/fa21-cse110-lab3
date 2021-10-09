@@ -1,14 +1,23 @@
+/*In index.css, there are 3 unique absolute units in total: cm,in,px,
+  In index.html there are 3 unique relative units in total: em,vw,vh*/
+
 /*Fonts*/
 @font-face { 
   font-family: lobster-regular; 
   src: url("./Lobster-Regular.ttf"); 
 } 
 
+/* On screens that are 993px wide or more, the background color is lightpink */
+@media screen and (min-width: 993px) {
+  body {
+    background-color: lightseagreen;
+  }
+}
+
 /* On screens that are 992px wide or less, the background color is lightpink */
 @media screen and (max-width: 992px) {
   body {
     background-color: lightpink;
-    color: white;
   }
 }
 
@@ -16,7 +25,6 @@
 @media screen and (max-width: 600px) {
   body {
     background-color: lightgrey;
-    color: white;
   }
 }
 
@@ -30,11 +38,6 @@
   and apply [rgb color] to property [background-color]*/
 #questionnaire {
   background-color: rgb(0, 255, 200);
-  /*Borders*/
-  border-style: solid;
-  border-color: black;
-  border-width: 5px;
-  border-radius: 25px;
   
   margin: auto;
   
@@ -47,7 +50,9 @@
 
 /*Select all with [Universal Selector ]*/
 * {
-  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+  margin: 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 /*Select the "element - nav" with [Element Selector] 
@@ -66,22 +71,63 @@ footer {
   background-color: lightgray;
 }
 
-/*TBD rgb(r, g, b) or rgba(r, g, b, a)*/
-
-
-/*TBD hsl(h, s, l) or hsla(h, s, l, a) */
-
 /*Select the "attribute - href" from "element - a" with [Attribute Selector] 
   and apply [hex code color] to property [background-color]*/
 a[href] {
   background-color: #fafa9c;
 }
 
+/*Select the button user point at with [Pseudo-class Selector]*/
+button:hover {
+  color: blue;
+}
+a:active {
+  background-color: red;
+}
 /*Select the "element - h2,h3" with [Selector List] 
   and apply style to [Text]*/
-h1,h2,h3 {
+h2,h3 {
   color: blue;
   text-decoration: underline;
   text-align: left;
   font-family: lobster-regular;
 }
+
+/*Select "element - p" inside "element -footer" with [Descendant Combinator]*/
+main section {
+  /*section borders*/
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 2cm;
+}
+
+footer p {
+  background-color: lightgreen;
+}
+
+/*Select "element - p" who is the direct child of "element - section" with [Child Combinator]*/
+section > p {
+  background-color: lightgray;
+}
+
+/*Select "element - ol" after "element - h2" [General sibling combinator]*/
+h2 ~ ol {
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*Select "element - img" immediately following "element - h3" [Adjacent sibling combinator]*/
+h3 + img {
+  position: static;
+  height: 3in;
+}
+
+/*Select "element - div" with "class name - title" by [Combining Two Selectors]*/
+div.title {
+  color: blue;
+  text-align: center;
+}
+
